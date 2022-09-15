@@ -1,7 +1,14 @@
-export const defaults: {
-   theme: string;
-} = {
-   theme: `.hljs {
+/**
+ * The base URL for the github repository that contains the themes.
+ */
+export const githubURL: string =
+   'https://raw.githubusercontent.com/mhafemann/highlight.js/main/src/styles/';
+
+/**
+ * Default highlight.js theme to use if the user doesn't specify one.
+ * Also used if there is an error fetching a theme from github.
+ */
+export const defaultTheme: string = `.hljs {
 	color: #abb2bf;
 	background: #0e141b;
 	padding: 2rem;
@@ -131,5 +138,4 @@ export const defaults: {
 	/* for v10 compatible themes */
 	.hljs-meta-keyword {
 	font-weight: bold;
-}`,
-};
+}`;

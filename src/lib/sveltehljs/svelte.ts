@@ -1,3 +1,7 @@
+/**
+ * Highlight.js language definition for svelte.
+ *
+ */
 export const svelteHLJS = (e: any) => {
    return {
       subLanguage: 'xml',
