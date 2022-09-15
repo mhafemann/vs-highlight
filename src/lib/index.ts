@@ -5,4 +5,4 @@ export { message } from './message';
 export { insertText } from './document';
 export { getSelection } from './document';
 export { highlight } from './highlighter';
-export { defaults } from './static';
+export { githubURL } from './static';
