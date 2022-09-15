@@ -1,6 +1,6 @@
-# VS-Highlight
+# vs-highlight
 
-[![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT) :exclamation:**NOTE:** This is still a work in progress.
+[![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT)
 
 Generate code snippets with [highlight.js](https://highlightjs.org/)
 
@@ -12,7 +12,7 @@ Generate code snippets with [highlight.js](https://highlightjs.org/)
 - [Commands](#commands)
 - [Keybindings](#keybindings)
 - [Release Notes](#release-notes)
-  - [1.0.0](#100)
+	- [1.0.0](#100)
 - [Todo](#todo)
 
 <br>
@@ -51,8 +51,10 @@ Initial release.
 ## Todo
 
 - [x] Convert to typescript.
-- [ ] Github Gist integration.
 - [x] Add command to insert a highlight.js theme that can be selected from a list.
+- [ ] Add outputToClipboard setting.
+- [ ] Github Gist integration.
+- [ ] Write tests.
 - [ ] Add a webView / web component for previewing the generated markup.
 - [ ] Generate a theme from the current `vscode.window.activeTextEditor` color theme.
 - [ ] Create a highlight.js extension to highlight with tailwindcss class names.
