@@ -1,0 +1,69 @@
+{
+   "name": "vs-highlight",
+   "displayName": "vs-highlight",
+   "description": "Generate code snippets with highlight.js.",
+   "version": "0.0.1",
+   "engines": {
+      "vscode": "^1.71.0"
+   },
+   "categories": [
+      "Other"
+   ],
+   "activationEvents": [
+      "onCommand:vs-highlight.insertThemeStyles",
+      "onCommand:vs-highlight.highlightSelection"
+   ],
+   "main": "./out/extension.js",
+   "contributes": {
+      "commands": [
+         {
+            "command": "vs-highlight.insertThemeStyles",
+            "title": "vs-highlight: insert theme CSS"
+         },
+         {
+            "command": "vs-highlight.highlightSelection",
+            "title": "vs-highlight: highlight selection."
+         }
+      ],
+      "keybindings": [
+         {
+            "key": "ctrl+7",
+            "command": "vs-highlight.insertThemeStyles"
+         },
+         {
+            "key": "ctrl+8",
+            "command": "vs-highlight.highlightSelection"
+         }
+      ],
+      "configuration": {
+         "title": "vs-highlight"
+      }
+   },
+   "scripts": {
+      "vscode:prepublish": "webpack --mode production",
+      "webpack": "webpack --mode development",
+      "webpack-dev": "webpack --mode development --watch",
+      "test-compile": "tsc -p ./",
+      "lint": "eslint src --ext .ts,.tsx"
+   },
+   "devDependencies": {
+      "@types/vscode": "^1.71.0",
+      "@types/glob": "^7.2.0",
+      "@types/mocha": "^9.1.1",
+      "@types/node": "16.x",
+      "@typescript-eslint/eslint-plugin": "^5.31.0",
+      "@typescript-eslint/parser": "^5.31.0",
+      "eslint": "^8.20.0",
+      "glob": "^8.0.3",
+      "mocha": "^10.0.0",
+      "typescript": "^4.7.4",
+      "ts-loader": "^9.3.1",
+      "webpack": "^5.74.0",
+      "webpack-cli": "^4.10.0",
+      "@vscode/test-electron": "^2.1.5"
+   },
+   "dependencies": {
+      "highlight.js": "^11.6.0",
+      "node-fetch": "^2.6.7"
+   }
+}
