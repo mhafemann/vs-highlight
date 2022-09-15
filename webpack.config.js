@@ -44,5 +44,8 @@ const extensionConfig = {
    infrastructureLogging: {
       level: 'log', // enables logging required for problem matchers
    },
+   optimization: {
+      minimize: true,
+   },
 };
 module.exports = [extensionConfig];
