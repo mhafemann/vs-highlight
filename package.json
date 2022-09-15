@@ -2,18 +2,24 @@
    "name": "vs-highlight",
    "displayName": "vs-highlight",
    "description": "Generate code snippets with highlight.js.",
+   "publisher": "mhafemann",
    "version": "0.0.1",
+   "icon": "images/icon.png",
    "engines": {
       "vscode": "^1.71.0"
    },
    "categories": [
       "Other"
    ],
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/mhafemann/vs-highlight"
+   },
    "activationEvents": [
       "onCommand:vs-highlight.insertThemeStyles",
       "onCommand:vs-highlight.highlightSelection"
    ],
-   "main": "./out/extension.js",
+   "main": "./dist/extension.js",
    "contributes": {
       "commands": [
          {
@@ -27,11 +33,11 @@
       ],
       "keybindings": [
          {
-            "key": "ctrl+7",
+            "key": "ctrl+9",
             "command": "vs-highlight.insertThemeStyles"
          },
          {
-            "key": "ctrl+8",
+            "key": "ctrl+0",
             "command": "vs-highlight.highlightSelection"
          }
       ],
@@ -47,23 +53,24 @@
       "lint": "eslint src --ext .ts,.tsx"
    },
    "devDependencies": {
-      "@types/vscode": "^1.71.0",
       "@types/glob": "^7.2.0",
       "@types/mocha": "^9.1.1",
       "@types/node": "16.x",
+      "@types/vscode": "^1.71.0",
       "@typescript-eslint/eslint-plugin": "^5.31.0",
       "@typescript-eslint/parser": "^5.31.0",
+      "@vscode/test-electron": "^2.1.5",
       "eslint": "^8.20.0",
       "glob": "^8.0.3",
+      "jsdoc-to-markdown": "^7.1.1",
       "mocha": "^10.0.0",
-      "typescript": "^4.7.4",
       "ts-loader": "^9.3.1",
+      "typescript": "^4.7.4",
       "webpack": "^5.74.0",
-      "webpack-cli": "^4.10.0",
-      "@vscode/test-electron": "^2.1.5"
+      "webpack-cli": "^4.10.0"
    },
    "dependencies": {
       "highlight.js": "^11.6.0",
-      "node-fetch": "^2.6.7"
+      "node-fetch": "^3.2.10"
    }
 }
