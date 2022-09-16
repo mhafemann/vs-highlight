@@ -1,5 +1,5 @@
 import { ExtensionContext, Disposable } from 'vscode';
-import { commands } from 'vscode';
+import { commands, window } from 'vscode';
 import {
    getTheme,
    showQuickPick,
@@ -40,8 +40,12 @@ export function activate(context: ExtensionContext) {
             if (highlighted) {
                insertText(highlighted);
             }
-
-            message.info('Selection highlighted.');
+            if (window.activeTextEditor) {
+               message.info(
+                  `Selection highlighted. 
+						${window.activeTextEditor.document.languageId.toLowerCase()}`
+               );
+            }
          }
       }
    );
