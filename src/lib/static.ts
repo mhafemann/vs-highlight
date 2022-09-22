@@ -1,45 +1,87 @@
 /**
+ * a Map containing a list of all the languages -
+ * supported by the library
+ */
+export const languages = new Map();
+languages.set('Bash', 'bash');
+languages.set('C', 'c');
+languages.set('C#', 'csharp');
+languages.set('C++', 'cpp');
+languages.set('CSS', 'css');
+languages.set('Diff', 'diff');
+languages.set('Go', 'go');
+languages.set('GraphQL', 'graphql');
+languages.set('HTML', 'html');
+languages.set('JSON', 'json');
+languages.set('Java', 'java');
+languages.set('JavaScript', 'javascript');
+languages.set('Kotlin', 'kotlin');
+languages.set('Less', 'less');
+languages.set('Lua', 'lua');
+languages.set('Makefile', 'makefile');
+languages.set('Markdown', 'md');
+languages.set('Objective-C', 'objc');
+languages.set('PHP', 'php');
+languages.set('Perl', '');
+languages.set('Plain text', 'txt');
+languages.set('Python', 'py');
+languages.set('Python REPL', 'pycon');
+languages.set('R', 'r');
+languages.set('Ruby', 'ruby');
+languages.set('Rust', 'rust');
+languages.set('SCSS', 'scss');
+languages.set('SQL', 'sql');
+languages.set('Shell Session', 'shell');
+languages.set('Swift', 'swift');
+languages.set('Svelte', 'svelte');
+languages.set('TOML, also INI', 'ini');
+languages.set('TypeScript', 'ts');
+languages.set('Visual Basic .NET', 'vb');
+languages.set('WebAssembly', 'webassembly');
+languages.set('YAML ', 'yaml');
+
+/**
  * List of pre-defined highlight.js languages.
  */
-export const languages = [
-   'Bash',
-   'C',
-   'C#',
-   'C++',
-   'CSS',
-   'Diff',
-   'Go',
-   'GraphQL',
-   'HTML',
-   'JSON',
-   'Java',
-   'JavaScript',
-   'Kotlin',
-   'Less',
-   'Lua',
-   'Makefile',
-   'Markdown',
-   'Objective-C',
-   'PHP',
-   'PHP Template',
-   'Perl',
-   'Plain text',
-   'Python',
-   'Python REPL',
-   'R',
-   'Ruby',
-   'Rust',
-   'SCSS',
-   'SQL',
-   'Shell Session',
-   'Swift',
-   'Svelte',
-   'TOML, also INI',
-   'TypeScript',
-   'Visual Basic .NET',
-   'WebAssembly',
-   'YAML ',
-];
+// export const languages = [
+//    'Bash',
+//    'C',
+//    'C#',
+//    'C++',
+//    'CSS',
+//    'Diff',
+//    'Go',
+//    'GraphQL',
+//    'HTML',
+//    'JSON',
+//    'Java',
+//    'JavaScript',
+//    'Kotlin',
+//    'Less',
+//    'Lua',
+//    'Makefile',
+//    'Markdown',
+//    'Objective-C',
+//    'PHP',
+//    'PHP Template',
+//    'Perl',
+//    'Plain text',
+//    'Python',
+//    'Python REPL',
+//    'R',
+//    'Ruby',
+//    'Rust',
+//    'SCSS',
+//    'SQL',
+//    'Shell Session',
+//    'Swift',
+//    'Svelte',
+//    'TOML, also INI',
+//    'TypeScript',
+//    'Visual Basic .NET',
+//    'WebAssembly',
+//    'YAML ',
+// ];
 /**
  * The base URL for the github repository that contains the themes.
  */

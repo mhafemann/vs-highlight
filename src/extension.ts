@@ -29,6 +29,7 @@ export function activate(context: ExtensionContext) {
    );
 
    // highlight the current selection.
+   // prettier-ignore
    const highlightSelection: Disposable = commands.registerCommand(
       'vs-highlight.highlightSelection',
       async () => {
@@ -37,10 +38,12 @@ export function activate(context: ExtensionContext) {
 
          // get the language and convert to lowercase
          const selectedLanguage = await showQuickPick(
-            languages,
+            [...languages.keys()],
             'Select a language:'
          );
-         const language = selectedLanguage?.toLowerCase();
+			
+         const language = languages.get(selectedLanguage);
+         console.log(language);
 
          // if the user selected a language and there is text selected -
          // highlight the text
@@ -54,9 +57,15 @@ export function activate(context: ExtensionContext) {
             // document and display a notification else display an error
             if (highlighted) {
                insertText(highlighted);
-            } else {
-               message.error('Error highlighting text.');
             }
+         }
+
+         if (!text) {
+            message.error('No text selected.');
+         }
+
+         if (!language) {
+            message.error('No language selected.');
          }
       }
    );
