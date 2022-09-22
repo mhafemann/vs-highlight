@@ -1,6 +1,6 @@
 export { getTheme } from './github';
-export { showQuickPick } from './ui';
-export { themes } from './theme';
+export { showQuickPick, showConfirmation } from './ui';
+export { themes, languages } from './static';
 export { message } from './message';
 export { insertText } from './document';
 export { getSelection } from './document';

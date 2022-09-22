@@ -3,7 +3,9 @@ import { commands, window } from 'vscode';
 import {
    getTheme,
    showQuickPick,
+   showConfirmation,
    themes,
+   languages,
    insertText,
    getSelection,
    highlight,
@@ -15,7 +17,7 @@ export function activate(context: ExtensionContext) {
    const insertStyles: Disposable = commands.registerCommand(
       'vs-highlight.insertThemeStyles',
       async () => {
-         const selection = await showQuickPick(themes);
+         const selection = await showQuickPick(themes, 'Select a theme:');
 
          if (selection) {
             const css = await getTheme(selection);
@@ -30,21 +32,30 @@ export function activate(context: ExtensionContext) {
    const highlightSelection: Disposable = commands.registerCommand(
       'vs-highlight.highlightSelection',
       async () => {
+         // get the current selection
          const text = await getSelection();
 
-         if (text) {
+         // get the language and convert to lowercase
+         const selectedLanguage = await showQuickPick(
+            languages,
+            'Select a language:'
+         );
+         const language = selectedLanguage?.toLowerCase();
+
+         // if the user selected a language and there is text selected -
+         // highlight the text
+         if (text && language) {
             const highlighted = await highlight(text, {
+               language: language,
                includePreTag: true,
             });
 
+            // if there is highlighted text, insert it into the -
+            // document and display a notification else display an error
             if (highlighted) {
                insertText(highlighted);
-            }
-            if (window.activeTextEditor) {
-               message.info(
-                  `Selection highlighted. 
-						${window.activeTextEditor.document.languageId.toLowerCase()}`
-               );
+            } else {
+               message.error('Error highlighting text.');
             }
          }
       }
