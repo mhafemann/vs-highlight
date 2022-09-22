@@ -3,42 +3,43 @@
  * supported by the library
  */
 export const languages = new Map();
-languages.set('Bash', 'bash');
-languages.set('C', 'c');
-languages.set('C#', 'csharp');
-languages.set('C++', 'cpp');
-languages.set('CSS', 'css');
-languages.set('Diff', 'diff');
-languages.set('Go', 'go');
-languages.set('GraphQL', 'graphql');
-languages.set('HTML', 'html');
-languages.set('JSON', 'json');
-languages.set('Java', 'java');
-languages.set('JavaScript', 'javascript');
-languages.set('Kotlin', 'kotlin');
-languages.set('Less', 'less');
-languages.set('Lua', 'lua');
-languages.set('Makefile', 'makefile');
-languages.set('Markdown', 'md');
-languages.set('Objective-C', 'objc');
-languages.set('PHP', 'php');
-languages.set('Perl', '');
-languages.set('Plain text', 'txt');
-languages.set('Python', 'py');
-languages.set('Python REPL', 'pycon');
-languages.set('R', 'r');
-languages.set('Ruby', 'ruby');
-languages.set('Rust', 'rust');
-languages.set('SCSS', 'scss');
-languages.set('SQL', 'sql');
-languages.set('Shell Session', 'shell');
-languages.set('Swift', 'swift');
-languages.set('Svelte', 'svelte');
-languages.set('TOML, also INI', 'ini');
-languages.set('TypeScript', 'ts');
-languages.set('Visual Basic .NET', 'vb');
-languages.set('WebAssembly', 'webassembly');
-languages.set('YAML ', 'yaml');
+languages
+   .set('Bash', 'bash')
+   .set('C', 'c')
+   .set('C#', 'csharp')
+   .set('C++', 'cpp')
+   .set('CSS', 'css')
+   .set('Diff', 'diff')
+   .set('Go', 'go')
+   .set('GraphQL', 'graphql')
+   .set('HTML', 'html')
+   .set('JSON', 'json')
+   .set('Java', 'java')
+   .set('JavaScript', 'javascript')
+   .set('Kotlin', 'kotlin')
+   .set('Less', 'less')
+   .set('Lua', 'lua')
+   .set('Makefile', 'makefile')
+   .set('Markdown', 'md')
+   .set('Objective-C', 'objc')
+   .set('PHP', 'php')
+   .set('Perl', '')
+   .set('Plain text', 'txt')
+   .set('Python', 'py')
+   .set('Python REPL', 'pycon')
+   .set('R', 'r')
+   .set('Ruby', 'ruby')
+   .set('Rust', 'rust')
+   .set('SCSS', 'scss')
+   .set('SQL', 'sql')
+   .set('Shell Session', 'shell')
+   .set('Swift', 'swift')
+   .set('Svelte', 'svelte')
+   .set('TOML, also INI', 'ini')
+   .set('TypeScript', 'ts')
+   .set('Visual Basic .NET', 'vb')
+   .set('WebAssembly', 'webassembly')
+   .set('YAML ', 'yaml');
 
 /**
  * The base URL for the github repository that contains the themes.
