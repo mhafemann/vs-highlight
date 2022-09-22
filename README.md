@@ -1,4 +1,4 @@
-# vs-highlight
+# vs-highlight (WIP)
 
 [![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT)
 
