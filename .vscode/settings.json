@@ -5,7 +5,17 @@
 		"**/.hg": true,
 		"**/CVS": true,
 		"**/.DS_Store": true,
-		"**/Thumbs.db": true
+		"**/Thumbs.db": true,
+		"LICENSE.txt": true,
+		"CHANGELOG.md": true,
+		"tsconfig.json": true,
+		"package-lock.json": true,
+		".vscodeignore": true,
+		".gitignore": true,
+		".eslintrc.json": true,
+		"node_modules": true,
+		"images": true,
+		"src/test": true
 	},
 	"explorerExclude.backup": {}
 }
