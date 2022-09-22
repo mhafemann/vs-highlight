@@ -41,48 +41,6 @@ languages.set('WebAssembly', 'webassembly');
 languages.set('YAML ', 'yaml');
 
 /**
- * List of pre-defined highlight.js languages.
- */
-// export const languages = [
-//    'Bash',
-//    'C',
-//    'C#',
-//    'C++',
-//    'CSS',
-//    'Diff',
-//    'Go',
-//    'GraphQL',
-//    'HTML',
-//    'JSON',
-//    'Java',
-//    'JavaScript',
-//    'Kotlin',
-//    'Less',
-//    'Lua',
-//    'Makefile',
-//    'Markdown',
-//    'Objective-C',
-//    'PHP',
-//    'PHP Template',
-//    'Perl',
-//    'Plain text',
-//    'Python',
-//    'Python REPL',
-//    'R',
-//    'Ruby',
-//    'Rust',
-//    'SCSS',
-//    'SQL',
-//    'Shell Session',
-//    'Swift',
-//    'Svelte',
-//    'TOML, also INI',
-//    'TypeScript',
-//    'Visual Basic .NET',
-//    'WebAssembly',
-//    'YAML ',
-// ];
-/**
  * The base URL for the github repository that contains the themes.
  */
 export const githubURL: string =
