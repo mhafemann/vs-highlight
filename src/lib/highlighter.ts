@@ -56,36 +56,35 @@ interface Options {
  * - **default:** `true`
  * - Wrap the output with `<pre>` and `<code>` tags. <br>
  * @returns <br>
- * - **type:** `Promise<string | void>` <br>
- * - The highlighted code.<br>
+ * - **type:** `Promise<string | null>` <br>
+ * - The highlighted code. or null<br>
  **/ // prettier-ignore
 export const highlight = async (
 	text: string,
 	options: Options = {
 		language: undefined,
 		includePreTag: true,
-	}): Promise<string | void> => {
+	}): Promise<string | null> => {
 
-		
    // if no language parameter is passed, get the language from the document.languageId.
    const lang = options.language
       ? options.language
       : window.activeTextEditor
       ? window.activeTextEditor.document.languageId.toLowerCase()
-      : '';
+      : 'txt';
 
    if (!hljs.getLanguage(lang)) {
       console.log(`Language (${lang}) is not supported.`);
-      return;
+      return null;
    }
-
+	
    // highlight the selection.
    const result = await hljs.highlight(text, {
       language: lang,
    }).value;
 
    if (options && options.includePreTag) {
-      return `<pre><code>${result}</code></pre>`;
+      return `<pre><code>\n${result}\n</code></pre>`;
    }
 
    return result;

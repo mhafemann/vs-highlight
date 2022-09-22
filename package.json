@@ -48,7 +48,7 @@
    "scripts": {
       "vscode:prepublish": "webpack --mode production",
       "webpack": "webpack --mode development",
-      "webpack-dev": "webpack --mode development --watch",
+      "watch": "webpack --mode development --watch",
       "test-compile": "tsc -p ./",
       "lint": "eslint src --ext .ts,.tsx"
    },
