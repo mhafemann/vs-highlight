@@ -1,5 +1,5 @@
 export { getTheme } from './github';
-export { showQuickPick, showConfirmation } from './ui';
+export { showQuickPick } from './ui';
 export { themes, languages } from './static';
 export { message } from './message';
 export { insertText } from './document';

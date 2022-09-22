@@ -3,7 +3,6 @@ import { commands, window } from 'vscode';
 import {
    getTheme,
    showQuickPick,
-   showConfirmation,
    themes,
    languages,
    insertText,
@@ -60,10 +59,12 @@ export function activate(context: ExtensionContext) {
             }
          }
 
+			// if there is no text selected, display an error
          if (!text) {
             message.error('No text selected.');
          }
 
+			// if the user did not select a language, display an error
          if (!language) {
             message.error('No language selected.');
          }

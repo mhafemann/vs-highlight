@@ -31,8 +31,7 @@ export const getTheme = async (
 		console.error(error);
 
 		if (error.message === '404') {
-			console.error(error);
-
+			
 			message.error(`Unable to fetch theme: ${theme} from github.\n 
 			Using default theme.\n
 			Make sure your machine is connected to the internet.
