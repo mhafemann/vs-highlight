@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <style>
+         /*!
+				 Theme: devibeans (dark)
+				 Author: @terminaldweller
+				 Maintainer: @terminaldweller
+			
+				 Inspired by vim's jellybeans theme (https://github.com/nanotech/jellybeans.vim)
+			*/
+         .hljs {
+            background: #262626;
+            padding: 1rem;
+            border-radius: 0.4rem;
+            color: #e2e8f0;
+            font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono',
+               'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace',
+               'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New',
+               monospace;
+            font-size: 1.1rem;
+            line-height: 1.4;
+         }
+
+         .hljs-attr,
+         .hljs-template-tag {
+            color: #8787d7;
+         }
+
+         .hljs-comment,
+         .hljs-doctag,
+         .hljs-quote {
+            color: #339966;
+         }
+
+         .hljs-params {
+            color: #a39e9b;
+         }
+
+         .hljs-regexp {
+            color: #d700ff;
+         }
+
+         .hljs-tag,
+         .hljs-selector-id,
+         .hljs-number,
+         .hljs-literal {
+            color: #ef5350;
+         }
+
+         .hljs-meta,
+         .hljs-meta .hljs-keyword {
+            color: #0087ff;
+         }
+
+         /* opt-out */
+         .hljs-operator,
+         .hljs-punctuation {
+         }
+
+         .hljs-selector-class,
+         .hljs-code,
+         .hljs-formula,
+         .hljs-variable,
+         .hljs-template-variable,
+         .hljs-selector-attr,
+         .hljs-selector-pseudo,
+         .hljs-link,
+         .hljs-keyword {
+            color: #64b5f6;
+         }
+
+         .hljs-built_in,
+         .hljs-title,
+         .hljs-deletion {
+            color: #ff8700;
+         }
+
+         .hljs-type,
+         .hljs-section,
+         .hljs-function,
+         .hljs-name,
+         .hljs-property,
+         .hljs-attribute {
+            color: #ffd75f;
+         }
+
+         .hljs-meta .hljs-string,
+         .hljs-string,
+         .hljs-subst,
+         .hljs-symbol,
+         .hljs-bullet,
+         .hljs-addition {
+            color: #558b2f;
+         }
+
+         .hljs-selector-tag {
+            color: #9966ff;
+         }
+
+         .hljs-emphasis {
+            font-style: italic;
+         }
+
+         .hljs-strong {
+            font-weight: bold;
+         }
+         .wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 15%;
+         }
+         .container {
+            width: 50%;
+         }
+      </style>
+      <div class="wrapper">
+         <div class="container">
+            <p
+               style="
+                  font-size: 20px;
+                  font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono',
+                     'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono',
+                     'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono',
+                     'Droid Sans Mono', 'Courier New', monospace;
+                  margin-left: 1rem;
+                  padding: 0px;
+                  line-height: 1;
+               ">
+               Theme: devibeans
+            </p>
+            <pre
+               class="hljs"><code><pre><code><span class="hljs-keyword">import</span> { <span class="hljs-variable language_">window</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vscode&#x27;</span>;
+<span class="hljs-keyword">import</span> { message } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./message&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * Show a quick pick menu and return the user selection.
+ * <span class="hljs-doctag">@param</span> items string[] The items to show in the quick pick menu.
+ * <span class="hljs-doctag">@returns</span> {<span class="hljs-type">Promise&lt;string | undefined&gt;</span>} Promise&lt;string | null&gt; The selected item or null.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> showQuickPick = <span class="hljs-keyword">async</span> (
+   <span class="hljs-attr">items</span>: <span class="hljs-built_in">string</span>[]
+   ): <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>&gt; =&gt; {
+
+   <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> <span class="hljs-variable language_">window</span>
+      .<span class="hljs-title function_">showQuickPick</span>(items, { <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;Select a theme:&#x27;</span> })
+      .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">selection</span> =&gt;</span> {
+
+         <span class="hljs-keyword">if</span> (selection) {
+            <span class="hljs-keyword">return</span> selection;
+         } <span class="hljs-keyword">else</span> {
+            message.<span class="hljs-title function_">info</span>(<span class="hljs-string">&#x27;Nothing selected.&#x27;</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+         }
+         
+      });
+
+   <span class="hljs-keyword">return</span> result;
+};</code></pre></code></pre>
+         </div>
+      </div>
+   </body>
+</html>
